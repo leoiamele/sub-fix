@@ -1,8 +1,13 @@
-File.foreach("users.srt") do |line| 
-  File.write("log2.txt", line.gsub("ñ", "n").gsub("Ñ", "N").gsub("á", "a").gsub("Á", "A")
-      .gsub("é", "e").gsub("É", "E").gsub("í", "i").gsub("Í", "I")
-      .gsub("ó", "o").gsub("Ó", "o").gsub("ú", "u").gsub("Ú", "u"), mode: "a")
+puts 'Que archivo quiere editar (incluya la extención del archivo. Ej .srt'
+file_name = gets.chomp
+
+File.foreach(file_name) do |line|
+  File.write(file_name + "_modificado", line.gsub("ñ", "n").gsub("Ñ", "N").gsub("á", "a").gsub("Á", "A")
+  .gsub("é", "e").gsub("É", "E").gsub("í", "i").gsub("Í", "I")
+  .gsub("ó", "o").gsub("Ó", "o").gsub("ú", "u").gsub("Ú", "u"), mode: "a")
 end
+
+puts 'Archivo procsado con éxito'
 
 
 
