@@ -1,4 +1,4 @@
-puts 'Que archivo quiere editar (incluya la extención del archivo. Ej .srt'
+puts '¿Qué archivo querés editar? (Incluí la extención del archivo. Ej .srt)'
 file_name = gets.chomp
 
 File.foreach(file_name) do |line|
@@ -7,7 +7,7 @@ File.foreach(file_name) do |line|
   .gsub("ó", "o").gsub("Ó", "o").gsub("ú", "u").gsub("Ú", "u"), mode: "a")
 end
 
-puts 'Archivo procsado con éxito'
+puts 'Archivo procesado con éxito'
 
 
 
